@@ -7,11 +7,12 @@
 
     <h2>{{ employe }}</h2>
     <p>
-        Entreprise : <a href="{{ path('show_entreprise', {'id': employe.entreprise.id})}}">{{ employe.entreprise }}</a><br>
-        Ville : {{ employe.ville }}<br>
-
+        <u>Entreprise</u> : <a href="{{ path('show_entreprise', {'id': employe.entreprise.id})}}">{{ employe.entreprise }}</a><br>
+        <u>Ville</u> : {% if employe.ville %} {{ employe.ville }}<br> {% else %} Ville non renseignée<br> {% endif %}
+        
         {# gestion de la date par TWIG #}
-        Date de naissance : {{ employe.dateNais | date("d/m/Y") }}<br>
-        Date d'embauche : {{ employe.dateEmbauche | date("d/m/Y") }}
+        <u>Date de naissance</u> : {{ employe.dateNais | date("d/m/Y") }}<br>
+        <u>Age</u> : {{employe.age}} ans<br>
+        <u>Date d'embauche</u> : {{ employe.dateEmbauche | date("d/m/Y") }}
     </p>
 {% endblock %}
