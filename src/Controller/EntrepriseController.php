@@ -21,13 +21,23 @@ final class EntrepriseController extends AbstractController
         // $entreprises = $entrepriseRepository->findAll();
 
         // equivalent SQL : SELECT * FROM entreprise WHERE ville = "Strasbourg" ORDER BY raisonSociale (ASC)
-        $entreprises = $entrepriseRepository->findBy(["ville" => "Strasbourg"], ["raisonSociale" => "ASC"]);
+        // $entreprises = $entrepriseRepository->findBy(["ville" => "Strasbourg"], ["raisonSociale" => "ASC"]);
+        $entreprises = $entrepriseRepository->findBy([], ["raisonSociale" => "ASC"]);
 
         return $this->render('entreprise/index.html.twig', [
             'controller_name' => 'EntrepriseController',
             'entreprises' => $entreprises
             // 'name' => $name,
             // 'tableau' => $tableau
+        ]);
+    }
+
+    #[Route('/entreprise/{id}', name: 'show_entreprise')]
+    # params converter
+    public function show(Entreprise $entreprise): Response 
+    {
+        return $this->render('entreprise/show.html.twig', [
+            'entreprise' => $entreprise
         ]);
     }
 }

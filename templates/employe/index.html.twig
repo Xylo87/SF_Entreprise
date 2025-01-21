@@ -6,6 +6,6 @@
     <h1>Liste des employés</h1>
 
     {% for employe in employes %}
-        {{employe}}<br>{{employe.entreprise}}<br><br>
+        <a href="{{ path('show_employe', {'id': employe.id})}}">{{employe}}</a><br>{{employe.entreprise}}<br><br>
     {% endfor %}
 {% endblock %}

@@ -9,7 +9,7 @@
 
     {% for entreprise in entreprises %}
         {# {{entreprise.raisonSociale ~ ' (' ~ entreprise.cp ~ ' ' ~ entreprise.ville ~ ')'}}<br> #}
-        {{entreprise}}<br>
+        <a href="{{ path('show_entreprise', {'id': entreprise.id})}}">{{entreprise}}</a><br>
     {% endfor %}
 
     {# {% for element in tableau %}

@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use IntlDateFormatter;
 
 #[ORM\Entity(repositoryClass: EntrepriseRepository::class)]
 class Entreprise
@@ -64,6 +65,20 @@ class Entreprise
         return $this->dateCrea;
     }
 
+    // public function getDateCreaFR(): ?string 
+    // {
+    //     $formatter = new IntlDateFormatter(
+    //         'fr_FR',
+    //         IntlDateFormatter::LONG,
+    //         IntlDateFormatter::NONE,
+    //         // 'Europe/Paris',
+    //         // IntlDateFormatter::GREGORIAN,
+    //         // 'dd/MM/yyyy à HH:mm'
+    //     );
+
+    //     return $formatter->format($this->dateCrea);
+    // }
+
     public function setDateCrea(\DateTimeInterface $dateCrea): static
     {
         $this->dateCrea = $dateCrea;
@@ -71,6 +86,7 @@ class Entreprise
         return $this;
     }
 
+    
     public function getAdresse(): ?string
     {
         return $this->adresse;
@@ -107,6 +123,11 @@ class Entreprise
         return $this;
     }
 
+    public function getAdresseComplete(): ?string 
+    {
+        return $this->adresse." ".$this->cp." ".$this->ville;
+    }
+
     /**
      * @return Collection<int, Employe>
      */
@@ -139,6 +160,7 @@ class Entreprise
 
     public function __toString()
     {
-        return $this->raisonSociale." (".$this->cp." ".$this->ville.")";
+        // return $this->raisonSociale." (".$this->cp." ".$this->ville.")";
+        return $this->raisonSociale;
     }
 }
