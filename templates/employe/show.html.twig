@@ -7,6 +7,7 @@
 
     <h2>{{ employe }}</h2>
     <p>
+        Entreprise : <a href="{{ path('show_entreprise', {'id': employe.entreprise.id})}}">{{ employe.entreprise }}</a><br>
         Ville : {{ employe.ville }}<br>
 
         {# gestion de la date par TWIG #}

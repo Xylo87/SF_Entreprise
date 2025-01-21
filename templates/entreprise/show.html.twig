@@ -12,7 +12,17 @@
         
         {# Date de création : {{ entreprise.dateCreaFR }} #}
 
-        {# gestion de la date par TWIG #}
+        {# gestion de la date par TWIG avec un filtre "|" #}
         Date de création : {{ entreprise.dateCrea | date("d/m/Y") }}
     </p>
-{% endblock %}
+
+    <h3>Liste des employés</h3>
+    {% if entreprise.employes | length > 0 %}
+        {% for employe in entreprise.employes %}
+            <a href="{{ path('show_employe', {'id': employe.id}) }}">{{ empl oye }}<br></a>
+        {% endfor %}
+    {% else %}
+        <p>Aucun employé</p>
+    {% endif %}
+    {% endblock %}
+    
