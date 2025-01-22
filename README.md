@@ -62,6 +62,6 @@ https://127.0.0.1:8001/entreprise
 
 ---
 
-## 5. Auteur
+## 4. Auteur
 Ce projet a été réalisé par Théo Arbogast (aka Xylo87).  
 N'hésitez pas à ouvrir une issue ou à me contacter pour toute suggestion ou question.
