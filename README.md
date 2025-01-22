@@ -7,7 +7,7 @@ Il permet l'affichage d'une liste d'entreprises, d'une liste globale d'employés
 Les entités **PHP** sont liées les unes aux autres, ce qui permet par **chaînage de méthodes** d'afficher les relations adéquates et de créer des liens entre les différentes vues **Twig**.
 L'application inclus un système de formulaires pour l'ajout et la modification d'une entreprise ou d'un salarié.
 Les différentes entités ont été migré en base de données **MySQL**, et les informations affichées sont appelées depuis celle-ci.
-Un minimum de style a été ajouté à l'application via des classes du framework ***BootStrap**.
+Un minimum de style a été ajouté à l'application via des classes du framework **BootStrap**.
 
 ---
 
