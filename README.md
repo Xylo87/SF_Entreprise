@@ -42,12 +42,12 @@ L'ajout et l'édition sont gérés via des formulaires créés avec **Symfony** 
 - Télécharger Laragon [ici](https://laragon.org/download/)
 - Démarrer Laragon
 - Enregistrer le "Repo" dans le dossier laragon\www\
-- Si le téléchargement d'une nouvelle version de PHP a été nécessaire, veillez suivre les instructions suivantes pour lier PHP et Apache à Laragon : [PHP](https://www.kreaweb.be/laragon-update-php/) et [Apache](https://www.kreaweb.be/laragon-update-apache/)
+- Si le téléchargement d'une nouvelle version de PHP a été nécessaire, veillez suivre les instructions suivantes pour lier PHP et Apache à Laragon : [PHP](https://www.kreaweb.be/laragon-update-php/) / [Apache](https://www.kreaweb.be/laragon-update-apache/)
 
 4. Il faudra installer (dans l'ordre) : 
--- [composer :](https://getcomposer.org/download/)
--- [scoop :](https://scoop.sh/) avec le Powershell Windows
--- [Symfony CLI :](https://symfony.com/download)
+-- [composer](https://getcomposer.org/download/)
+-- [scoop](https://scoop.sh/) avec le Powershell Windows
+-- [Symfony CLI](https://symfony.com/download)
 
 5. Démarrer le serveur de Symfony en tâche de fond : 
 ```
