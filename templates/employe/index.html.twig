@@ -5,7 +5,12 @@
 {% block body %}
     <h1>Liste des employés</h1>
 
+    <a href="{{ path('new_employe')}}" class="btn btn-success">Ajouter une employé</a><br><br>
+
     {% for employe in employes %}
-        <a href="{{ path('show_employe', {'id': employe.id})}}">{{employe}}</a><br>{{employe.entreprise}}<br><br>
+        <a href="{{ path('show_employe', {'id': employe.id})}}">{{employe}}</a>
+        <a class="btn btn-warning" href="{{ path('edit_employe', {'id': employe.id})}}">Edit</a>
+        <a class="btn btn-danger" href="{{ path('delete_employe', {'id': employe.id})}}">Delete</a><br>
+        {{employe.entreprise}}</li><br><br>
     {% endfor %}
 {% endblock %}

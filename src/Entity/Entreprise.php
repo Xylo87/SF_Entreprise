@@ -36,6 +36,8 @@ class Entreprise
      * @var Collection<int, Employe>
      */
     #[ORM\OneToMany(targetEntity: Employe::class, mappedBy: 'entreprise', orphanRemoval: true)]
+    // annotation de tri à ce niveau
+    #[ORM\OrderBy(["nom" => "ASC"])]
     private Collection $employes;
 
     public function __construct()
