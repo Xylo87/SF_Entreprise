@@ -1,9 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajouter un employé{% endblock %}
+{% block title %}
+    {% if edit %}
+    Éditer un employé 
+    {% else %}
+    Ajouter un employé
+    {% endif %}
+{% endblock %}
 
 {% block body %}
-    <h1>Ajouter une employé</h1>
+    {% if edit %}
+    <h1>Éditer un employé</h1> 
+    {% else %}
+    <h1>Ajouter un employé</h1>
+    {% endif %}
 
     {# {{ form(formAddEmploye) }} #}
 
@@ -14,15 +24,15 @@
                 {{ form_row(formAddEmploye.nom) }}
             </div>
             <div class="col-sm">
-                {{ form_row(formAddEmploye.prenom) }}
+                {{ form_row(formAddEmploye.prenom, {'label': 'Prénom'}) }}
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                {{ form_row(formAddEmploye.dateNais) }}
+                {{ form_row(formAddEmploye.dateNais, {'label': 'Date de naissance'}) }}
             </div>
             <div class="col-sm">
-                {{ form_row(formAddEmploye.dateEmbauche) }}
+                {{ form_row(formAddEmploye.dateEmbauche, {'label': 'Date d\'embauche'}) }}
             </div>
         </div>
         {{ form_row(formAddEmploye.ville) }}
