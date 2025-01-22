@@ -25,20 +25,23 @@ class EmployeType extends AbstractType
             ->add('prenom', TextType::class, [
                 'attr' => [
                     'class' => 'form-control'
-                ]
+                ],
+                'label' => 'Prénom'
             ])
             ->add('dateNais', DateType::class, [
                 'required' => false,
                 'widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control'
-                ]
+                ],
+                'label' => 'Date de naissance'
             ])
             ->add('dateEmbauche', DateType::class, [
                 'widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control'
-                ]
+                ],
+                'label' => 'Date d\'embauche'
             ])
             ->add('ville', TextType::class, [
                 'required' => false,

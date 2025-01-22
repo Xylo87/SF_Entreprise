@@ -24,7 +24,8 @@ class EntrepriseType extends AbstractType
                 'widget' => 'single_text', 
                 'attr' => [
                     'class' => 'form-control'
-                ]
+                ],
+                'label' => 'Date de création'
             ])
             ->add('adresse', TextType::class, [
                 'attr' => [
@@ -34,7 +35,8 @@ class EntrepriseType extends AbstractType
             ->add('cp', TextType::class, [
                 'attr' => [
                     'class' => 'form-control'
-                ]
+                ],
+                'label' => 'Code postal'
             ])
             ->add('ville', TextType::class, [
                 'attr' => [
