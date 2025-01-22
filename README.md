@@ -13,7 +13,7 @@ Un minimum de style a été ajouté à l'application via des classes du framewor
 
 ## 2. Fonctionnalités
 
-- Navigation entres les différentes **vues** (liste des entreprises, liste des employés, ajout) à l'aide d'une **Navbar** sommaire en **template** (``` base.html.twig ```)
+- Navigation entre les différentes **vues** (liste des entreprises, liste des employés, ajout etc.) à l'aide d'une **Navbar** sommaire en **template** (``` base.html.twig ```)
 
 - Affichage de détails sur chaque entreprise/salarié et liens entre les entités.
 
